@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace AdventOfCode2025.Puzzles
 {
-    [Puzzle(2)]
+    [PuzzleDay(2)]
     public class Day2 : IPuzzle
     {
         public long SolvePartOne(IEnumerable<string> input)

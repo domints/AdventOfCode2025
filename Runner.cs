@@ -51,7 +51,7 @@ namespace AdventOfCode2025
         {
             foreach (Type type in assembly.GetTypes())
             {
-                if (type.GetCustomAttributes(typeof(PuzzleAttribute), true).Length > 0 && typeof(IPuzzle).IsAssignableFrom(type))
+                if (type.GetCustomAttributes(typeof(PuzzleDayAttribute), true).Length > 0 && typeof(IPuzzle).IsAssignableFrom(type))
                 {
                     yield return type;
                 }
@@ -60,7 +60,7 @@ namespace AdventOfCode2025
 
         private static int? GetDayOfPuzzle(Type puzzleType)
         {
-            var puzzleAttribute = puzzleType.GetCustomAttribute<PuzzleAttribute>();
+            var puzzleAttribute = puzzleType.GetCustomAttribute<PuzzleDayAttribute>();
             if (puzzleAttribute == null)
                 return null;
 

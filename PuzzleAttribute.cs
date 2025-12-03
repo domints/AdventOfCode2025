@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 namespace AdventOfCode2025
 {
     [AttributeUsage(AttributeTargets.Class)]
-    public class PuzzleAttribute : Attribute
+    public class PuzzleDayAttribute : Attribute
     {
         public int Day { get; set; }
-        public PuzzleAttribute(int day)
+        public PuzzleDayAttribute(int day)
         {
             this.Day = day;
         }

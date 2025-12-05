@@ -29,7 +29,7 @@ rootCommand.SetAction(parseResult =>
 
 if (Debugger.IsAttached)
 {
-    Runner.Run(2, "test.txt");
+    Runner.Run(4, "test.txt");
     return 0;
 }
 else

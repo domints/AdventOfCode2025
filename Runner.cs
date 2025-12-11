@@ -35,12 +35,19 @@ namespace AdventOfCode2025
                 var input = File.ReadLines(inputPath);
                 var result1 = puzzle.SolvePartOne(input);
                 Console.Write($" Solution for part 1: {result1}");
-                var result2 = puzzle.SolvePartTwo(input);
-                if (result2.HasValue)
+                try
                 {
-                    Console.WriteLine($", solution for part 2: {result2}");
+                    var result2 = puzzle.SolvePartTwo(input);
+                    if (result2.HasValue)
+                    {
+                        Console.WriteLine($", solution for part 2: {result2}");
+                    }
+                    else
+                    {
+                        Console.WriteLine();
+                    }
                 }
-                else
+                catch (NotImplementedException)
                 {
                     Console.WriteLine();
                 }
